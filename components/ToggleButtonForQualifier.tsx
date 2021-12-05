@@ -16,11 +16,11 @@ export interface IQualifierCheckboxes {
 }
 
 const QualifierNames: Record<IQualifierLevel, string> = {
-  [IQualifierLevel.Alaska]: "Alaska",
-  [IQualifierLevel.Arizona]: "Arizona",
-  [IQualifierLevel.Tennessee]: "Tennessee",
-  [IQualifierLevel.Vermont]: "Vermont",
-  [IQualifierLevel.Hawaii]: "Hawaii",
+    [IQualifierLevel.Alaska]: "Alaska",
+    [IQualifierLevel.Arizona]: "Arizona",
+    [IQualifierLevel.Tennessee]: "Tennessee",
+    [IQualifierLevel.Vermont]: "Vermont",
+    [IQualifierLevel.Hawaii]: "Hawaii",
 };
 
 export function ToggleButtonForQualifier(props: {
@@ -28,24 +28,24 @@ export function ToggleButtonForQualifier(props: {
   selected: boolean;
   onChange?: (value: boolean) => void;
 }): JSX.Element {
-  return (
-    <ToggleButton
-      size={"small"}
-      onChange={(_) => props.onChange?.(!props.selected)}
-      value={props.qualifier}
-      sx={{
-        width: "100%",
-        textOverflow: "clip",
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textAlign: "left",
-      }}
-      selected={props.selected}
-    >
-      <span>{QualifierNames[props.qualifier]}</span>
-      {props.selected ? <CheckIcon /> : <CrossIcon />}
-    </ToggleButton>
-  );
+    return (
+        <ToggleButton
+            size={"small"}
+            onChange={(_) => props.onChange?.(!props.selected)}
+            value={props.qualifier}
+            sx={{
+                width: "100%",
+                textOverflow: "clip",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textAlign: "left",
+            }}
+            selected={props.selected}
+        >
+            <span>{QualifierNames[props.qualifier]}</span>
+            {props.selected ? <CheckIcon /> : <CrossIcon />}
+        </ToggleButton>
+    );
 }
 
 export default ToggleButtonForQualifier;

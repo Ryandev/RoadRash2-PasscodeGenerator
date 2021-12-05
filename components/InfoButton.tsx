@@ -9,17 +9,17 @@ export interface IInfoButton {
 }
 
 function InfoButton(props: IInfoButton): JSX.Element {
-  return (
-    <Button
-      style={props.style}
-      variant="contained"
-      color="primary"
-      onClick={() => window.open(props.href)}
-    >
-      <Typography>{props.text}</Typography>
-      <LaunchIcon fontSize="small" />
-    </Button>
-  );
+    return (
+        <Button
+            style={props.style}
+            variant="contained"
+            color="primary"
+            onClick={() => window.open(props.href)}
+        >
+            <Typography>{props.text}</Typography>
+            <LaunchIcon fontSize="small" />
+        </Button>
+    );
 }
 
 export default InfoButton;

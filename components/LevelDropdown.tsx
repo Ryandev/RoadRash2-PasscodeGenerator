@@ -7,14 +7,14 @@ export interface ILevelDropDown {
 }
 
 function LevelDropdown(props: ILevelDropDown): JSX.Element {
-  return (
-    <Dropdown
-      elements={levels.all()}
-      selected={props.value}
-      name="Level"
-      onSelect={(level) => props.onChange(level)}
-    />
-  );
+    return (
+        <Dropdown
+            elements={levels.all()}
+            selected={props.value}
+            name="Level"
+            onSelect={(level) => props.onChange(level)}
+        />
+    );
 }
 
 export default LevelDropdown;

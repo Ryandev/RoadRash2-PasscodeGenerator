@@ -7,14 +7,14 @@ export interface IBikeDropDown {
 }
 
 function BikeDropdown(props: IBikeDropDown): JSX.Element {
-  return (
-    <Dropdown
-      elements={bikes.all()}
-      selected={bikes.atIndex(props.value)}
-      name="Bike"
-      onSelect={(bikeName) => props.onChange(bikes.atValue(bikeName))}
-    />
-  );
+    return (
+        <Dropdown
+            elements={bikes.all()}
+            selected={bikes.atIndex(props.value)}
+            name="Bike"
+            onSelect={(bikeName) => props.onChange(bikes.atValue(bikeName))}
+        />
+    );
 }
 
 export default BikeDropdown;
