@@ -6,5 +6,4 @@ const githubAccountName = env.PUBLISH_GHREPOACCOUNT || "ryandev";
 
 module.exports = {
   assetPrefix: isProd ? `/${githubRepoName}/` : "",
-  basePath: isProd ? `/https://${githubAccountName}/${githubRepoName}/` : "",
 };
