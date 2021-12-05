@@ -1,4 +1,3 @@
+import "./index.css";
 
-import './index.css'
-
-export { default } from 'next/app';
+export { default } from "next/app";

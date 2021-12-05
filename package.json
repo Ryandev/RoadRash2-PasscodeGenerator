@@ -6,7 +6,8 @@
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint pages model components --ext ts --ext tsx --ext js",
+    "lint": "eslint pages model components views --ext ts --ext tsx --ext js",
+    "lintfix": "eslint pages model components views --ext ts --ext tsx --ext js --fix",
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
